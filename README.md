@@ -1,52 +1,190 @@
-# TechZone – Online Computer Store
+# TechZone – E-Commerce Website (PHP + MySQL)
 
-## Project Description
-TechZone is an online computer store built with PHP and MySQL.  
-It allows users to browse products, add items to a cart, create an account, place orders, and see an order confirmation.  
-An admin panel is provided to manage products, view customer orders, and manage user accounts.
+### **Students Name:** Dhruv Kansara(5146917), Nihari Makvana (5144648), Sneha Patel(249413340)
+### **Course:** Web Programming (COMP…)  
+### **Institution:** Algoma University  
+### **Instructor:**  
+### **Project:** Term Project – Full E-Commerce System  
+### **Semester:** Fall 2025
 
-## Technologies Used
-- PHP (with PDO)
-- MySQL (XAMPP / phpMyAdmin)
-- HTML5, CSS3, Bootstrap 5
-- JavaScript (basic)
-- Font Awesome icons
+---
 
-## Features
+## 📌**Project Description**
+TechZone is a PHP-based e-commerce platform that allows users to browse products, add items to cart, and complete a checkout process.  
+It also includes a secure **Admin Dashboard** where administrators can manage products, view customer orders, and manage user accounts.
 
-### User Side
-- Responsive homepage with hero banner.
-- Product listing page with cards and prices.
-- Single product view page.
-- Shopping cart using PHP sessions (add/remove/update quantities).
-- Checkout form with basic payment (stores only last 4 card digits).
-- User registration (signup) with hashed passwords.
-- User login/logout with session.
-- Logged-in user’s name shown in navbar with dropdown + “My Orders” (if added).
-- Order placement storing data in `orders`, `order_items`, `payments`, and `customers`.
+This project demonstrates:
+- PHP CRUD operations  
+- MySQL relational database  
+- PDO secure queries  
+- Session-based authentication  
+- Responsive UI (Bootstrap)
 
-### Admin Side
-- Admin login with secure hashed password.
-- Admin dashboard.
-- Manage products: list, add, edit, delete.
-- View customer orders (joined with customer info).
-- View/manage user accounts (customers list).
+---
 
-## Database
+## ⭐**Features**
 
-Main tables:
-- `customers`
-- `products`
-- `orders`
-- `order_items`
-- `payments`
-- `admins`
+### 🛍 **User-Side**
+- Browse all products  
+- Single product view  
+- Add to cart  
+- View and update cart  
+- Checkout (place order)  
+- Automatic order + order item insertion  
+- Session-based cart system  
 
-SQL for creating and populating the database is in:  
-`/sql/techzone.sql`
+### 🔐 **Admin Panel**
+- Admin login (secure, password hashed)  
+- Dashboard with quick actions  
+- Manage Products  
+  - Add  
+  - Edit  
+  - Delete  
+- View Customer Orders  
+- View Users  
+- Logout (session destroy)
 
-## Setup Instructions
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+## 🗂 **Project Structure**
+```
+termproject/
+│── admin/
+│     ├── login.php
+│     ├── dashboard.php
+│     ├── products.php
+│     ├── product_edit.php
+│     ├── product_add.php
+│     ├── product_delete.php
+│     ├── orders.php
+│     ├── users.php
+│     ├── logout.php
+│     ├── admin_header.php
+│     └── admin_footer.php
+│
+├── db/
+│     ├── conn.php
+│     └── techzone.sql   ← (Database export file)
+│
+├── includes/
+├── pics/
+├── css/
+├── js/
+└── index.php
+
+# ⚙ **Setup Instructions (Important)**  
+Follow these steps to run the project locally.
+
+---
+
+## **1️⃣ Install Requirements**
+You must have installed:
+
+- **XAMPP** (recommended)  
+- PHP 8+  
+- MySQL  
+- Apache  
+
+---
+
+## **2️⃣ Move Project to htdocs**
+Move your project folder into:
+
+```
+C:\xampp\htdocs\termproject
+```
+
+so you can run:
+
+```
+http://localhost/termproject
+```
+
+---
+
+## **3️⃣ Create the MySQL Database**
+Open **phpMyAdmin**  
+→ Go to **http://localhost/phpmyadmin**  
+→ Click *New*  
+→ Enter database name: **techzone**  
+→ Click **Create**
+
+---
+
+## **4️⃣ Import the SQL File**
+Inside phpMyAdmin:
+
+1. Click your database: **techzone**
+2. Go to **Import** tab
+3. Click **Choose File**
+4. Select:
+```
+termproject/db/techzone.sql
+```
+5. Click **Go**
+
+Your database (admins, customers, orders, products…) will be created automatically.
+
+---
+
+## **5️⃣ Configure Database Connection**
+Open:
+
+```
+db/conn.php
+```
+
+Verify:
+
+```php
+$host = 'localhost';
+$dbname = 'techzone';
+$username = 'root';
+$password = '';
+```
+
+---
+
+## **6️⃣ Start Apache + MySQL**
+Open **XAMPP Control Panel**:
+
+✔ Start Apache  
+✔ Start MySQL  
+
+Then open website:
+
+```
+http://localhost/termproject
+```
+
+---
+
+# 🔐 **Admin Login Credentials**
+(Default admin created in SQL file)
+
+```
+Email: admin@techzone.com
+Password: Admin@123
+```
+
+If for some reason password doesn't work:
+→ Recreate admin with hashed password  
+(Your SQL file includes hashed password already.)
+
+# 🔗 **GitHub Link**
+Paste your repository link here once uploaded:
+
+```
+https://github.com/<your-username>/<repository-name>
+```
+
+---
+
+# ✔ Submitted Files Should Include:
+- All PHP source files  
+- CSS, JS, images  
+- SQL file (`techzone.sql`)  
+- README.md  
+- Video presentation link  
+
+---
