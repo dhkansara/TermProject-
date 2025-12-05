@@ -49,28 +49,59 @@ This project demonstrates:
 ## 🗂 **Project Structure**
 ```
 termproject/
+│
 │── admin/
-│     ├── login.php
+│     ├── admin_footer.php
+│     ├── admin_header.php
 │     ├── dashboard.php
-│     ├── products.php
-│     ├── product_edit.php
+│     ├── login.php
+│     ├── logout.php
+│     ├── orders.php
 │     ├── product_add.php
 │     ├── product_delete.php
-│     ├── orders.php
-│     ├── users.php
-│     ├── logout.php
-│     ├── admin_header.php
-│     └── admin_footer.php
+│     ├── product_edit.php
+│     ├── products.php
+│     └── users.php
 │
-├── db/
+│── css/
+│
+│── db/
 │     ├── conn.php
-│     └── techzone.sql   ← (Database export file)
+│     └── techzone.sql      ← Database export file
 │
-├── includes/
-├── pics/
-├── css/
-├── js/
-└── index.php
+│── includes/
+│
+│── js/
+│
+│── node_modules/
+│
+│── pics/
+│
+│── scss/
+│
+├── .gitignore
+├── README.md
+│
+├── add_to_cart.php
+├── cart.php
+├── checkout.php
+├── index.php
+├── login.php
+├── logout.php
+├── make_admin.php
+├── migrate_products.php
+├── package-lock.json
+├── package.json
+├── place_order.php
+├── product-data.php
+├── products.php
+├── remove_cart.php
+├── remove_item.php
+├── signup.php
+├── signup_success.php
+├── singleproduct.php
+└── update_cart.php
+
 
 # ⚙ **Setup Instructions (Important)**  
 Follow these steps to run the project locally.
