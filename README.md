@@ -103,11 +103,6 @@ termproject/
 └── update_cart.php
 
 
-# ⚙ **Setup Instructions (Important)**  
-Follow these steps to run the project locally.
-
----
-
 ## **1️⃣ Install Requirements**
 You must have installed:
 
