@@ -206,7 +206,7 @@ If for some reason password doesn't work:
 Paste your repository link here once uploaded:
 
 ```
-https://github.com/<your-username>/<repository-name>
+https://github.com/dhkansara/TermProject-.git
 ```
 
 ---
